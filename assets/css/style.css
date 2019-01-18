@@ -1,0 +1,42 @@
+body {
+	background-image: url("../images/background.jpg");
+}
+
+h1 {
+    font-family: 'WaltographRegular'; 
+    font-weight: normal;
+    font-style: normal;
+	margin-top: 15px;
+	display: inline-block;
+	color: rgb(205, 10, 223);
+	font-size: 100px; 
+	margin-left: 430px;
+	text-shadow: .03em .03em 0 hsla(230,40%,50%,1);
+}
+
+h2 img {
+    align-content: left;
+    position: sticky;
+}
+
+#start, #done {
+    font-family: 'WaltographRegular'; 
+    font-weight: normal;
+    font-style: normal;
+	background-color: black;
+	color: white;
+	padding: 15px 32px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 30px;
+}
+
+div#sub-wrapper {
+    background-image:linear-gradient(rgba(84, 8, 146, 0.911), rgb(151, 52, 160));
+	opacity: 0.9;
+    text-align: center;
+    color: black;
+    width: 60%;
+	margin-left: 300px;
+}
