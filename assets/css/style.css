@@ -15,8 +15,37 @@ h1 {
 }
 
 h2 img {
-    align-content: left;
-    position: sticky;
+	margin: 0px 100px 0px 370px;	
+}
+
+@keyframes pretty {
+    0%   {color: rgb(191, 117, 209);
+    font-size: 20px;}
+    20%  {color: rgb(7, 89, 165);
+        font-size: 40px;}
+    25%   {color: rgb(73, 91, 245);
+        font-size: 20px;}
+    45%  {color: rgb(0, 153, 255);
+        font-size: 40px;}
+    50%   {color: rgb(11, 116, 253);
+        font-size: 20px;}
+    70%  {color: rgb(6, 51, 136);
+        font-size: 40px;}
+    75%  {color: rgb(92, 19, 126);
+        font-size: 20px;}
+    85%  {color: rgb(173, 40, 190);
+        font-size: 40px;}
+    95%  {color: rgb(95, 10, 121);
+        font-size: 20px;}
+    100% {color: red;
+        font-size: 40px;}
+  }
+
+div #show-countDownNumber {
+	margin: 0px 100px 0px 600px;	
+	animation-name: pretty;
+	animation-duration: 60s;
+
 }
 
 #start, #done {
@@ -32,7 +61,7 @@ h2 img {
 	font-size: 30px;
 }
 
-div#sub-wrapper {
+div #sub-wrapper {
     background-image:linear-gradient(rgba(84, 8, 146, 0.911), rgb(151, 52, 160));
 	opacity: 0.9;
     text-align: center;

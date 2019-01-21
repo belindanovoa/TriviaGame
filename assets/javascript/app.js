@@ -1,8 +1,9 @@
-var game = {
-    correct: 0,
-    incorrect: 0,
-    counter: 60,
-  };
+var intervalId= 0;
+var countDownNumber= 60;
+var startButton = $('start').on('click', run);
+var submitButton = $('done').on('click', stop);
+var quizWrapper = $('sub-wrapper').on('click', run);
+ 
 var questions = [{
   question: "In The Sword in the Stone, what does Merlin call The Greatest Force on Earth?",
   answers: ["Magic", "Science", "Love", "Music"],
@@ -37,7 +38,7 @@ var questions = [{
   correctAnswer: "Snow White"
 }, {
   question: "What is the name of the pub that Flynn brings Rapunzel?",
-  answers: ["The Snuggly Duckling", "Monte Carlo", "Brothers Arms Pub", "The Watering Hole"],
+  answers: ["The Snuggly Duckling", "Monte Carlo", "Brothers Arms Pub", "Lagunitas"],
   correctAnswer: "The Snuggly Duckling"
 }, {
     question: "How many acres is Disney World??",
@@ -45,48 +46,55 @@ var questions = [{
     correctAnswer: "27,442 acres"
   },
 ];
-var game = $("#quiz"); 
-
-// create onclick event for Start button
-$(document).on("click","#start", run, function() {
-    timer.start();
-  });
-// onclick START button activates sub-wrapper
-function start(subwrapper){
-}
 
 // Set countdown timer for 60 secs
 function run() {
     clearInterval(intervalId);
-    intervalId = setInterval(decrement, 60000);
+    intervalId = setInterval(decrement, 1000);
 }
   function decrement() {
-    number--;
-    $("#show-number").html("<h2>" + number + "</h2>");
-    if (number === 0) {
+    if (startButton.on("click",run)){
+    countDownNumber--;
+    $("#show-countDownNumber").html("<h2>" + countDownNumber + "</h2>");
+    }
+    if (countDownNumber === 0) {
         stop();
         alert("Time Up!");
     }
 }
-// 
+function stop() {
+    clearInterval(intervalId);
+}
+run();
+
+// create onclick event for Start button
+// $(document).on("click","#start", run, {
+//     startButton.countDownNumber.();
+//   });
+
+// onclick START button activates sub-wrapper
+// start.addEventListener('click', ()=>{
+//     startButton.countDownNumber;
+// });
+
 // set function for each question 
-// if answer === correct answer then add +1 to correct
-game.correct++;
-        }
-      else {
-        game.incorrect++;
-      }
+// if answer === correctAnswer then add +1 to correct
+// game.correct++;
+//         }
+//       else {
+//         game.incorrect++;
+//       }
 // else if question is != +1 incorrect
 // else if question is unanswered != +1 unanswered
 // create loop for each question 
-for (var i = 0; i < questions.length; i++)
+// for (var i = 0; i < questions.length; i++)
 
-// alert("Times UP!")
 
 // create onllick event for Done button
 $(document).on("click","#done",function() {
     game.done();
   });
   
+// display results
 
  
